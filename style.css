@@ -1,0 +1,204 @@
+:root {
+    --dark-bg: #121212;
+    --dark-card: #1e1e1e;
+    --dark-text: #ffffff;
+    --dark-border: #2d2d2d;
+    --accent-color: #00ff00;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: var(--dark-card) !important;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.navbar-brand {
+    color: var(--accent-color) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-outline-success {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+}
+
+.card {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title {
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+}
+
+.modal-content {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+    border: 1px solid var(--dark-border);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--dark-border);
+}
+
+.form-control, .form-select {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--dark-border);
+    color: var(--dark-text);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--dark-bg);
+    border-color: var(--accent-color);
+    color: var(--dark-text);
+    box-shadow: 0 0 0 0.25rem rgba(0, 255, 0, 0.25);
+}
+
+.form-label {
+    color: var(--dark-text);
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 10px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+/* Modal Info Styles */
+.modal-xl {
+    max-width: 90%;
+}
+
+.info-modal .modal-body {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.info-modal .image-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+.info-modal .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-modal .content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-modal .content-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.info-modal .content-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.info-modal .rating-section {
+    margin-top: auto;
+}
+
+.info-modal .rating-section h4 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .info-modal .modal-body {
+        flex-direction: column;
+    }
+    
+    .info-modal .image-section {
+        max-width: 100%;
+    }
+} 
