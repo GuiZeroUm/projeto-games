@@ -33,3 +33,9 @@
 - Sempre mantenha o MAMP rodando enquanto estiver trabalhando no projeto
 - Faça backup do banco de dados antes de fazer alterações significativas
 - Em caso de problemas, verifique se todas as portas necessárias estão disponíveis
+
+## Como rodar o servidor em um IP publico
+Primeiramente instale o ngrok
+brew install --cask ngrok
+Logo após, configure sua conta, e rode o servidor em questão, após criar o arquivo ngrok.yml
+ngrok http 8888
